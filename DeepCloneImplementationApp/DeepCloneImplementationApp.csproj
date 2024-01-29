@@ -5,8 +5,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
-	<BinaryFormatter_EnableUnsafeSerialization>true</BinaryFormatter_EnableUnsafeSerialization>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,12 +1,11 @@
 ﻿using Common;
 using System.Runtime.Serialization.Formatters.Binary;
 
-var department = new Department
-{
-    DepartmentName = "Sales",
-    Employees = new List<Employee> { new Employee { EmployeeName = "John Doe" }
-}
-};
+AppContext.SetSwitch("System.Runtime.Serialization.Formatters.BinaryFormatter.SurrogateSelector", true);
+AppContext.SetSwitch("System.Runtime.Serialization.Formatters.AllowAnySerializableObject", true);
+
+var department = new Department();
+
 BinaryFormatter formatter = new BinaryFormatter();
 using (FileStream fs = new FileStream("department.dat", FileMode.OpenOrCreate))
 {

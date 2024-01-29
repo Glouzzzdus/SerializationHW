@@ -3,15 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerializationApp", "SerializationHW\BinarySerializationApp.csproj", "{8D0B6153-B3A6-4226-AAD8-BF12137CE855}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySerializationApp", "SerializationHW\BinarySerializationApp.csproj", "{8D0B6153-B3A6-4226-AAD8-BF12137CE855}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLSerializationApp", "XMLSerializationApp\XMLSerializationApp.csproj", "{7A47B7AB-2003-4B63-98B4-76BF0EA0D4A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLSerializationApp", "XMLSerializationApp\XMLSerializationApp.csproj", "{7A47B7AB-2003-4B63-98B4-76BF0EA0D4A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONSerializationApp", "JSONSerializationApp\JSONSerializationApp.csproj", "{D2D444E0-9C67-454E-89AB-E7836B2DAD44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONSerializationApp", "JSONSerializationApp\JSONSerializationApp.csproj", "{D2D444E0-9C67-454E-89AB-E7836B2DAD44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "ClassLibrary1\Common.csproj", "{9EDD20F9-45C0-42F8-85C9-3C514EA3F8BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "ClassLibrary1\Common.csproj", "{9EDD20F9-45C0-42F8-85C9-3C514EA3F8BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOwnSerializationApp", "MyOwnSerializationApp\MyOwnSerializationApp.csproj", "{FAF03E2C-4EF2-4A0F-AA54-0CC364BCB0C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyOwnSerializationApp", "MyOwnSerializationApp\MyOwnSerializationApp.csproj", "{FAF03E2C-4EF2-4A0F-AA54-0CC364BCB0C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCloneImplementationApp", "DeepCloneImplementationApp\DeepCloneImplementationApp.csproj", "{591643FD-9397-4B18-81EB-E3C2098EC20B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerializationTests", "BinarySerializationTests\BinarySerializationTests.csproj", "{34E3687A-0596-4CD4-9E09-A612A5CC9827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONSerializationTests", "JSONSerializationTests\JSONSerializationTests.csproj", "{E8D82898-7AFD-4A67-A494-16A72B436950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLSerializationTests", "XMLSerializationTests\XMLSerializationTests.csproj", "{54CC8AC6-EDFB-41F4-99DE-47226404C31C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOwnSerializationTests", "MyOwnSerializationTests\MyOwnSerializationTests.csproj", "{67B4BD8B-7620-4E44-AC96-1E367C28EEC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCloneImplementationTests", "DeepCloneImplementationTests\DeepCloneImplementationTests.csproj", "{DA66FE16-4AB4-40D6-857D-0187E654B48A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +51,30 @@ Global
 		{FAF03E2C-4EF2-4A0F-AA54-0CC364BCB0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAF03E2C-4EF2-4A0F-AA54-0CC364BCB0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAF03E2C-4EF2-4A0F-AA54-0CC364BCB0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591643FD-9397-4B18-81EB-E3C2098EC20B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591643FD-9397-4B18-81EB-E3C2098EC20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591643FD-9397-4B18-81EB-E3C2098EC20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591643FD-9397-4B18-81EB-E3C2098EC20B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E3687A-0596-4CD4-9E09-A612A5CC9827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E3687A-0596-4CD4-9E09-A612A5CC9827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E3687A-0596-4CD4-9E09-A612A5CC9827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E3687A-0596-4CD4-9E09-A612A5CC9827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D82898-7AFD-4A67-A494-16A72B436950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D82898-7AFD-4A67-A494-16A72B436950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D82898-7AFD-4A67-A494-16A72B436950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D82898-7AFD-4A67-A494-16A72B436950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54CC8AC6-EDFB-41F4-99DE-47226404C31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54CC8AC6-EDFB-41F4-99DE-47226404C31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54CC8AC6-EDFB-41F4-99DE-47226404C31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54CC8AC6-EDFB-41F4-99DE-47226404C31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B4BD8B-7620-4E44-AC96-1E367C28EEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B4BD8B-7620-4E44-AC96-1E367C28EEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B4BD8B-7620-4E44-AC96-1E367C28EEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B4BD8B-7620-4E44-AC96-1E367C28EEC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA66FE16-4AB4-40D6-857D-0187E654B48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA66FE16-4AB4-40D6-857D-0187E654B48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA66FE16-4AB4-40D6-857D-0187E654B48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA66FE16-4AB4-40D6-857D-0187E654B48A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

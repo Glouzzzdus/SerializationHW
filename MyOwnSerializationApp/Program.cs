@@ -1,20 +1,24 @@
-﻿using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.AccessControl;
-using Common;
+﻿using Common;
 
-var simpleClass = new SimpleClass { Property1 = 5, Property2 = "Test" };
+var simpleClass = new SimpleClass ();
 
-BinaryFormatter formatter = new BinaryFormatter();
-using (FileStream stream = new FileStream("output.dat", FileMode.OpenOrCreate))
+// Serialization
+using (FileStream stream = new FileStream("output.dat", FileMode.Create))
+using (BinaryWriter writer = new BinaryWriter(stream))
 {
-    formatter.Serialize(stream, simpleClass);
-    Console.WriteLine("Object serialized");
+    simpleClass.Serialize(writer);
 }
 
+Console.WriteLine("Object serialized");
+
+// Deserialization
+SimpleClass newSimpleClass = new SimpleClass();
 using (FileStream stream = new FileStream("output.dat", FileMode.Open))
+using (BinaryReader reader = new BinaryReader(stream))
 {
-    SimpleClass newSimpleClass = (SimpleClass)formatter.Deserialize(stream);
-    Console.WriteLine("Object deserialized");
-    Console.WriteLine("Property 1: " + newSimpleClass.Property1);
-    Console.WriteLine("Property 2: " + newSimpleClass.Property2);
+    newSimpleClass.Deserialize(reader);
 }
+
+Console.WriteLine("Object deserialized");
+Console.WriteLine("Property 1: " + newSimpleClass.Property1);
+Console.WriteLine("Property 2: " + newSimpleClass.Property2);

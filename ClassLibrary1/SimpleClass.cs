@@ -8,23 +8,28 @@ using System.Threading.Tasks;
 namespace Common
 {
     [Serializable]
-    public class SimpleClass : ISerializable
+    public class SimpleClass
     {
         public int Property1 { get; set; }
         public string Property2 { get; set; }
 
-        public SimpleClass() { }
-
-        protected SimpleClass(SerializationInfo info, StreamingContext context)
+        public void Serialize(BinaryWriter writer)
         {
-            Property1 = info.GetInt32("Property1");
-            Property2 = info.GetString("Property2");
+            writer.Write(Property1);
+            writer.Write(Property2);
         }
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        public void Deserialize(BinaryReader reader)
         {
-            info.AddValue("Property1", Property1);
-            info.AddValue("Property2", Property2);
+            if (reader.PeekChar() < 0)
+                throw new Exception("Stream ended unexpectedly while deserializing.");
+
+            Property1 = reader.ReadInt32();
+
+            if (reader.PeekChar() < 0)
+                throw new Exception("Stream ended unexpectedly while deserializing.");
+
+            Property2 = reader.ReadString();
         }
     }
 }
